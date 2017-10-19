@@ -10,6 +10,12 @@ public class QueryContainer {
     String query;
     int numberOfResults = 10;
 
+
+    public QueryContainer(){
+
+    }
+
+
     public QueryContainer(String query) {
         this.query = query;
     }

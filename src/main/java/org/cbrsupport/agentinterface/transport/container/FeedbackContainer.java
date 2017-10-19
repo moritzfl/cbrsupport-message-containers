@@ -11,6 +11,10 @@ public class FeedbackContainer {
     private int caseId;
     private boolean useful;
 
+    public FeedbackContainer(){
+
+    }
+
     public int getCaseId() {
         return caseId;
     }
