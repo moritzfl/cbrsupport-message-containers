@@ -43,13 +43,13 @@ public class QueryResultEntryContainer {
     }
 
 
-
     @Override
     public String toString() {
         return new StringJoiner(", ", this.getClass().getSimpleName() + "[", "]")
                 .add("caseId = " + caseId)
                 .add("similarity = " + similarity)
                 .add("solution = " + solution)
+                .add("solutionId = " + solutionId)
                 .toString();
     }
 

@@ -10,9 +10,19 @@ import java.util.StringJoiner;
 public class FeedbackContainer {
     private int caseId;
     private boolean useful;
+    private String query;
 
-    public FeedbackContainer(){
 
+    public FeedbackContainer() {
+
+    }
+
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
     }
 
     public int getCaseId() {
@@ -35,6 +45,7 @@ public class FeedbackContainer {
     public String toString() {
         return new StringJoiner(", ", this.getClass().getSimpleName() + "[", "]")
                 .add("caseId = " + caseId)
+                .add("query = " + query)
                 .add("useful = " + useful)
                 .toString();
     }

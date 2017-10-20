@@ -3,6 +3,7 @@ package org.cbrsupport.agentinterface.transport.container;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.StringJoiner;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -34,5 +35,13 @@ public class QueryContainer {
 
     public void setQuery(String query) {
         this.query = query;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", this.getClass().getSimpleName() + "[", "]")
+                .add("numberOfResults = " + numberOfResults)
+                .add("query = " + query)
+                .toString();
     }
 }
