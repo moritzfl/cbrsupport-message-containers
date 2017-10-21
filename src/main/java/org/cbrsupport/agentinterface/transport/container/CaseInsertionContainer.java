@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
+import java.util.StringJoiner;
 
 
 @XmlRootElement
@@ -12,6 +13,10 @@ public class CaseInsertionContainer {
     String query;
     String solution;
     List<String> keywords;
+
+    public CaseInsertionContainer() {
+
+    }
 
     public String getQuery() {
         return query;
@@ -37,7 +42,13 @@ public class CaseInsertionContainer {
         this.keywords = keywords;
     }
 
-    public CaseInsertionContainer() {
 
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", this.getClass().getSimpleName() + "[", "]")
+                .add("keywords = " + keywords)
+                .add("query = " + query)
+                .add("solution = " + solution)
+                .toString();
     }
 }
