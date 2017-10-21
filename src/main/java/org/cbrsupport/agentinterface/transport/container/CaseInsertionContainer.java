@@ -1,7 +1,13 @@
 package org.cbrsupport.agentinterface.transport.container;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CaseInsertionContainer {
     String query;
     String solution;
